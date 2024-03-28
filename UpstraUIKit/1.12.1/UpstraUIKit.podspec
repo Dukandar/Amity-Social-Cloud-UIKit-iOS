@@ -12,9 +12,10 @@ Pod::Spec.new do |s|
     s.author             = { "$(git config user.name)" => "$(git config user.email)" }
     s.source       = { :http => 'https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios-uikit/1.12.1/uikit.zip' }
     s.vendored_frameworks = 'Distribution/UpstraUIKit.xcframework', 'Distribution/EkoChat.xcframework', 'Distribution/Realm.xcframework'
-    s.platform = :ios
+    s.platform = :ios, :visionos
     s.swift_version = "5"
     s.ios.deployment_target  = '12.0'
+    s.visionos.deployment_target = "1.0"
     
     # Exclude arm64 architecture
     s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
