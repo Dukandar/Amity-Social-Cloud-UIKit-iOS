@@ -12,8 +12,7 @@ Pod::Spec.new do |s|
     s.author             = { "$(git config user.name)" => "$(git config user.email)" }
     s.source       = { :http => 'https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios-uikit/1.12.1/uikit.zip' }
     s.vendored_frameworks = 'Distribution/UpstraUIKit.xcframework', 'Distribution/EkoChat.xcframework', 'Distribution/Realm.xcframework'
-    s.platform = :ios, :visionos
-    s.swift_version = "5"
+    s.platform = :ios
     s.ios.deployment_target  = '12.0'
     s.visionos.deployment_target = '1.0'
     
